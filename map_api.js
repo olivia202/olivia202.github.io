@@ -5,9 +5,10 @@ window.onload = function(){
     var zip = document.getElementById("query").value;
     console.log(zip);
     $(function() {
+      console.log("updated");
     $.getJSON('convertcsv.json', function(data) {
       for(var i = 0; i < data.length; i++){
-        console.log(data[0]);
+        console.log(data[i]);
       }
        // $.each(data.Zipcode, function(i, f) {
        //   console.log(f);
