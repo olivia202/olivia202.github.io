@@ -7,7 +7,7 @@ window.onload = function(){
     $(function() {
     $.getJSON('convertcsv.json', function(data) {
        $.each(data.Zipcode, function(i, f) {
-         // console.log(f);
+         console.log(f);
          if(f == zip) {
            console.log("changing lat and long");
            lat = f.Lat;
