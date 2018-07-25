@@ -6,14 +6,15 @@ window.onload = function(){
     console.log(zip);
     $(function() {
     $.getJSON('convertcsv.json', function(data) {
-       $.each(data.Zipcode, function(i, f) {
-         console.log(f);
-         if(f == zip) {
-           console.log("changing lat and long");
-           lat = f.Lat;
-           long = f.Long;
-         }
-       });
+       // $.each(data.Zipcode, function(i, f) {
+       //   console.log(f);
+       //   if(f == zip) {
+       //     console.log("changing lat and long");
+       //     lat = f.Lat;
+       //     long = f.Long;
+       //   }
+       // });
+       console.log(data.length);
      });
     });
   var xmlhttp = new XMLHttpRequest();
