@@ -6,6 +6,9 @@ window.onload = function(){
     console.log(zip);
     $(function() {
     $.getJSON('convertcsv.json', function(data) {
+      for(var i = 0; i < data.length; i++){
+        console.log(data[0]);
+      }
        // $.each(data.Zipcode, function(i, f) {
        //   console.log(f);
        //   if(f == zip) {
@@ -14,7 +17,6 @@ window.onload = function(){
        //     long = f.Long;
        //   }
        // });
-       console.log(data.length);
      });
     });
   var xmlhttp = new XMLHttpRequest();
