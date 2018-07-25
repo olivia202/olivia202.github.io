@@ -2,10 +2,12 @@ window.onload = function(){
   var lat = 40.74917;
   var long = -73.98529;
   document.getElementById("button").onclick = function search() {
+    var zip = document.getElementById("query").value;
+    console.log(zip);
     $(function() {
     $.getJSON('convertcsv.json', function(data) {
-      console.log("running");
        $.each(data.Zipcode, function(i, f) {
+         // console.log(f);
          if(f == zip) {
            console.log("changing lat and long");
            lat = f.Lat;
