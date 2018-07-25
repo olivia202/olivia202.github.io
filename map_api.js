@@ -5,19 +5,15 @@ window.onload = function(){
     var zip = document.getElementById("query").value;
     console.log(zip);
     $(function() {
-      console.log("updated");
+      console.log("UPDATED");
     $.getJSON('convertcsv.json', function(data) {
       for(var i = 0; i < data.length; i++){
-        console.log(data[i]);
+        if(zip = data[i].Zipcode){
+          console.log("changing lat and long");
+          lat = data[i].Lat;
+          long = data[i].Long;
+        }
       }
-       // $.each(data.Zipcode, function(i, f) {
-       //   console.log(f);
-       //   if(f == zip) {
-       //     console.log("changing lat and long");
-       //     lat = f.Lat;
-       //     long = f.Long;
-       //   }
-       // });
      });
     });
   var xmlhttp = new XMLHttpRequest();
