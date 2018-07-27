@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Localizing the Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Josefin+Slab|Jura|Philosopher|Pontano+Sans|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Marcellus+SC|Philosopher|Playfair+Display+SC" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCniO-c285K9rte5B_0mv9cK21aVHPRCig&libraries=places&callback=initMap&language=en&region=US"
+    async defer>
+    </script>
+
+    <!-- <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        width: 80%;
+        margin: 0;
+        padding: 0;
+      }
+      .logo {
+        width: 80px;
+        float: right;
+        margin-top: 55px;
+        margin-right: 15%;
+      }
+      .a {
+        text-decoration: none;
+        color: white;
+      }
+      #topbar {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:50px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .bar {
+        color: white;
+        text-align: center;
+        display: inline;
+        width: 25%;
+        font-size: 20px;
+        margin:auto;
+        font-family: 'El Messiri', sans-serif;
+      }
+
+      .bar:hover {
+        background-color: grey;
+        padding:  11px;
+      } -->
+      <link rel="stylesheet" href="HTH.css">
+    </style>
+  </head>
+
+  <body>
+    <div id= "topbar" >
+      <div class="bar"> <a class="a" href="actual.html"> HOME </a> </div>
+          <div class="bar"> <a class="a" href="rotd.html"> RECIPE OF THE DAY </a> </div>
+      <div class="bar"> <a class="a" href="GetStarted.html"> GET STARTED </a> </div>
+      <div class="bar"> <a class="a" href="whatbcooking.html"> WHAT'S COOKING </a> </div>
+      <div class="bar"> <a class="a" href="map_api.html"> SERVE YOUR SOCIETY </a> </div>
+      <div> <img class="logo" src="logo.png"> </div>
+    </div>
+
+    <h1 class="boxed"> Find Your Food Bank </h1>
+
+    <h2 class="new"> We designed this page to help our users find local food banks to donate their food.
+      Enter your zipcode and find your local foodbank! </h2>
+
+    <input id="address" placeholder="enter zipcode" type="text">
+    <button id="button">Search</button>
+    <div id="map"></div>
+
+    <script>
+    var latitude = '';
+    var longitude = '';
+    var address;
+    var map;
+    var service;
+    var infowindow;
+
+    document.getElementById("button").onclick = function(){
+      address = document.getElementById("address").value;
+      document.getElementById("address").value = "";
+
+      var geocoder= new google.maps.Geocoder();
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+           latitude = results[0].geometry.location.lat();
+           longitude = results[0].geometry.location.lng();
+           console.log('Latitude: ' + latitude + ' Longitude: ' + longitude);
+           var latLng = new google.maps.LatLng(latitude, longitude);
+           map.panTo(latLng);
+           sendRequest(latLng);
+           map.setZoom(10);
+        } else {
+          console.log("Geocode was not successful for the following reason: " + status);
+        }
+      });
+    }
+
+      function initMap() {
+        var pyrmont = new google.maps.LatLng(40.74917,-73.98529);
+        map = new google.maps.Map(document.getElementById('map'), {
+              center: pyrmont,
+              zoom: 10
+        });
+      }
+
+      function sendRequest(loc){
+        var request = {
+          location: loc,
+          radius: '50',
+          query: 'food bank',
+          fields: ['photos', 'formatted_address', 'name', 'opening_hours']
+        };
+
+        service = new google.maps.places.PlacesService(map);
+        service.textSearch(request, callback);
+      }
+
+
+      function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(results[i]);
+          }
+        }
+      }
+
+
+    function createMarker(place) {
+      var marker = new google.maps.Marker({
+        position: place.geometry.location,
+        map: map
+    });
+    var text = place["name"] + "<br>" + place["formatted_address"];
+    var infowindow = new google.maps.InfoWindow({
+      content: text
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+}
+
+
+    </script>
+
+  </body>
+</html>

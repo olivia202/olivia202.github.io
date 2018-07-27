@@ -1,0 +1,95 @@
+ h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px
+} */
+
+#demo{
+  font-family: 'Quicksand', sans-serif;
+  color: DarkBlue;
+  font-size: 40px;
+}
+
+body {
+  background-image:url("knife.jpg");
+  background-size: cover;
+  font-family: 'El Messiri', sans-serif;
+ /* background-image: url("bluee.jpg"); */
+  background-color: #e6f7ff;
+
+}
+
+h1{
+ background-color: black;
+ font-family: 'El Messiri', sans-serif;
+ font-size: 50;
+ color: white;
+ text-align: center;
+}
+p{
+  font-size: 20px;
+  text-align: center;
+  color:black;
+}
+div{
+ font-family: 'El Messiri', sans-serif;
+ font-size: 25;
+ color: black;
+ /* border: 3px double #000; */
+
+}
+
+.food{
+ margin-bottom: 50px;
+}
+
+img{
+ background-color: black;
+ width: 400px;
+ border-color: black;
+ border-width: medium;
+}
+
+.textbox{
+ border: 3px double #000;
+ /* background-color: white; */
+ /* margin-left: 450px;
+ margin-right: 50px */
+  font-family: 'El Messiri', sans-serif;
+ color: black;
+ font-size: 20;
+}
+
+#right {
+  width: 50%;
+  position: relative;
+  margin-left: 500px;
+  /* margin-right:10px; */
+}
+
+/* h1{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+} */
+
+#image {
+  float: center;
+  margin-left: 20px;
+  style: 'float:left;'
+  margin-bottom: auto;
+}
+
+.image-div{
+  float:left;
+  margin-right:10px;
+  max-width: 20%;
+  max-height: 20%;
+}
+
+#date{
+  font-family: 'Quicksand', sans-serif;
+  color: DarkBlue;
+}
+
+.together{
+  height: auto;
+}

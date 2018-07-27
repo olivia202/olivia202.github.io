@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GetStarted</title>
+  <link href="http://food2fork.com/api/search" rel="api">
+  <link href="http://food2fork.com/api/get" rel="api">
+  <script src=api.js> </script>
+  <link rel="stylesheet"  href="api.css">
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro|El+Messiri|Marcellus|Marcellus+SC|Philosopher|Playfair+Display+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro|El+Messiri|Marcellus|Marcellus+SC|Philosopher|Playfair+Display+SC" rel="stylesheet">
+</head>
+<body>
+<!-- key: API Key
+q: Search Query (Ingredients should be separated by commas). If this is omitted top rated recipes will be returned.
+sort:  How the results should be sorted. See Below for details.
+page:  Used to get additional results -->
+<div id= "topbar" >
+  <div class="bar"> <a href="actual.html"> HOME </a> </div>
+  <div class="bar"> <a class="a" href="rotd.html"> RECIPE OF THE DAY </a> </div>
+  <div class="bar"> <a class="a" href="GetStarted.html"> GET STARTED </a> </div>
+  <div class="bar"> <a href="whatbcooking.html"> WHAT'S COOKING </a> </div>
+  <div class="bar"> <a class="a"  href="map_api.html"> SERVE YOUR SOCIETY </a> </div>
+  <div> <img class="logo" src="logo.png"> </div>
+</div>
+
+<h1 class="boxed"> Getting Started </h1>
+
+<p class="style">Ingredients should be seperated by commas</p>
+<input id="query" value='Enter Text' type="text">
+<button id="button" onclick="search()">Search</button>
+<pre id="response"></pre>
+<div>
+<p id="recipeName" class="recipe_name"></p>
+<a target="_blank" id="link" class="recipe_link" href="">Link to recipe</a>
+<img id="image" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName2" class="recipe_name"></p>
+<a target="_blank" id="link2" class="recipe_link" href="">Link to recipe</a>
+<img id="image2" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName3" class="recipe_name"></p>
+<a target="_blank" id="link3" class="recipe_link" href="">Link to recipe</a>
+<img id="image3" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName4" class="recipe_name"></p>
+<a target="_blank" id="link4" class="recipe_link" href="">Link to recipe</a>
+<img id="image4" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName5" class="recipe_name"></p>
+<a target="_blank" id="link5" class="recipe_link" href="">Link to recipe</a>
+<img id="image5" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName6" class="recipe_name"></p>
+<a target="_blank"id="link6" class="recipe_link" href="">Link to recipe</a>
+<img id="image6" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName7" class="recipe_name"></p>
+<a target="_blank" id="link7" class="recipe_link" href="">Link to recipe</a>
+<img id="image7" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName8" class="recipe_name"></p>
+<a target="_blank"id="link8" class="recipe_link" href="">Link to recipe</a>
+<img id="image8" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName9" class="recipe_name"></p>
+<a target="_blank"id="link9" class="recipe_link" href="">Link to recipe</a>
+<img id="image9" class="recipe_img" src="">
+</div>
+
+<div>
+<p id="recipeName10" class="recipe_name"></p>
+<a target="_blank"id="link10" class="recipe_link" href="">Link to recipe</a>
+<img id="image10" class="recipe_img" src="">
+</div>
+
+</body>
+</html>

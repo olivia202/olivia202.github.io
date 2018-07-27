@@ -1,0 +1,54 @@
+ /* html {
+  background-image: url("background4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+h1 {
+  font-size: 75px;
+  color: white;
+  font-family: 'El Messiri', sans-serif;
+  text-align: center;
+}
+
+.boxed {
+  /* border: 100px;
+  width:690px ;
+  height: 100px; */
+  /* background-color: black; */
+  /* margin-top: 7%;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#topbar {
+  background-color: black;
+  position: fixed;top: 0;
+  left: 0;
+  width: 100%;
+  height:50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bar {
+  color: white;
+  text-align: center;
+  display: inline;
+  width: 25%;
+  font-size: 20px;
+  margin:auto;
+  font-family: 'El Messiri', sans-serif;
+}
+
+.bar:hover {
+  background-color: grey;
+  padding:  11px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+} */ */

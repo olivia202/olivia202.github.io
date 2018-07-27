@@ -1,0 +1,134 @@
+#topbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 80px;
+  float: right;
+  margin-top: 55px;
+  margin-right: 15%;
+}
+
+.bar {
+  color: white;
+  text-align: center;
+  display: inline;
+  width: 25%;
+  font-size: 20px;
+  margin:auto;
+  font-family: 'El Messiri', sans-serif;
+}
+
+.bar:hover {
+  background-color: grey;
+  padding:  11px;
+}
+
+body{
+  font-family: 'El Messiri', sans-serif;
+  background-image: url("background3.jpg");
+  /* background-color: #e7b3ff; */
+  margin-top: 6%;
+  /* background-repeat: no-repeat; */
+  background-size:cover;
+  /* min-width: %; */
+  min-height: 100%;
+  background-size: 100%;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+h1{
+  /* background-color: black; */
+  font-family: 'El Messiri', sans-serif;
+  font-size: 75;
+  color: white;
+  text-align: center;
+
+}
+
+h2{
+  background-color: black;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 45;
+  color: white;
+  text-align: center;
+}
+
+div{
+  font-family: 'El Messiri', sans-serif;
+  font-size: 28;
+}
+
+.food{
+  margin-bottom: 50px;
+}
+
+img{
+  background-color: black;
+  width: 400px;
+}
+
+.foodtitle{
+
+}
+
+.flash:hover {
+  padding: 10px;
+  background-image: url("background3.jpg");
+}
+#goback{
+  font-size: 28;
+  color: white;
+  text-decoration: underline;
+}
+
+#textbox{
+  /* border: 3px double #000; */
+  margin-left: 460px;
+  margin-right: 50px;
+  margin-bottom: 140px;
+  font-family: 'El Messiri', sans-serif;
+  color: white;
+  font-size: 20;
+}
+
+#textbox2{
+  /* border: 3px double #000; */
+  margin-left: 460px;
+  margin-right: 50px;
+  margin-bottom: 180px;
+  font-family: 'El Messiri', sans-serif;
+  color: white;
+  font-size: 20;
+}
+
+#textbox3{
+  /* border: 3px double #000; */
+  margin-left: 460px;
+  margin-right: 50px;
+  margin-bottom: 230px;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 20;
+  color: white;
+}
+
+#textbox4{
+  /* border: 3px double #000; */
+  margin-left: 460px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 20;
+  color: white;
+}

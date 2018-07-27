@@ -1,0 +1,124 @@
+/* p{
+  font-family: 'El Messiri' sans-serif;
+  font-size: 25px;
+  color: purple;
+}
+
+a{
+  font-family: 'El Messiri' sans-serif;
+} */
+html {
+ background-image: url("background4.jpg");
+ max-height: 100%;
+ background-repeat: repeat;
+ background-size: cover;
+ background-position: fixed;
+ max-width: 100%;
+}
+
+
+.logo {
+  width: 80px;
+  float: right;
+  margin-top: 55px;
+  margin-right: 15%;
+}
+
+.style {
+  color:white;
+  font-size: 21px;
+  text-align: center;
+  margin-top: -3%;
+  font-style: italic;
+  font-weight: bold;
+}
+
+input {
+  margin-left: 40%;
+}
+
+#button {
+  font-size:18px;
+}
+#query {
+  text-align: center;
+  font-size: 18px;
+}
+h1 {
+ font-size: 75px;
+ color: white;
+ font-family: 'El Messiri', sans-serif;
+ text-align: center;
+}
+
+.boxed {
+ /* border: 100px;
+ width:690px ;
+ height: 100px; */
+ /* background-color: black; */
+ margin-top: 7%;
+ margin-left:auto;
+ margin-right: auto;
+ text-align: center;
+}
+
+#topbar {
+ background-color: black;
+ position: fixed;top: 0;
+ left: 0;
+ width: 100%;
+ height:50px;
+ display: flex;
+ flex-direction: row;
+}
+
+.bar {
+ color: white;
+ text-align: center;
+ display: inline;
+ width: 25%;
+ font-size: 20px;
+ margin:auto;
+ font-family: 'El Messiri', sans-serif;
+}
+
+.bar:hover {
+ background-color: grey;
+ padding:  11px;
+}
+
+a {
+ text-decoration: none;
+ color: white;
+}
+
+.recipe_name{
+  font-family: 'El Messiri', sans-serif;
+  text-underline-position: under;
+  color: black;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 25px;
+  /* line-height: 4%; */
+}
+
+.recipe_link{
+font-style: italic;
+text-decoration: underline;
+visibility:hidden;
+font-size: 25px;
+margin-left: 30%;
+margin-right:30%;
+color: black;
+}
+
+.recipe_img{
+/* max-width: 50%; */
+margin-left: 30%;
+margin-right: 30%;
+/* position: fixed; */
+margin-bottom: 190px;
+width: 450px;
+/* length: 200px; */
+
+}
